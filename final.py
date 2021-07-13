@@ -27,7 +27,7 @@ def extract_availability_data(response):
 	response_json = response.json()
 	for center in response_json["centers"]:
 		for session in center["sessions"]:
-			if session["available_capacity_dose1"] > 0  and session["available_capacity_dose1"] > 0 and session["min_age_limit"]==18: # edit age limt and slots 
+			if session["available_capacity_dose1"] > 0  or session["available_capacity_dose1"] > 0 and session["min_age_limit"]==18: # edit age limt and slots 
 			
 
 				# message = " \n Name: {},\n Address: {},Pincode: {},\n Dose 1 Available: {},\n Minimum Age: {},\n Vaccine: {},\n Slots: {},\n Date: {},\n Book Here : https://selfregistration.cowin.gov.in/" .format(
